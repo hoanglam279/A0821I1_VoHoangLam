@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67b19229-b7e5-4ca9-8f90-600d541eefda" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/4. Git &amp; HTML/Bài Tập/TaoCV.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4. Git &amp; HTML/Bài Tập/TaoCV.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4. Git &amp; HTML/Bài Tập/TaoDS.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4. Git &amp; HTML/Thực hành/TH1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 3/Bài Tập/CauTrucDK.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 3/Bài Tập/CauTrucDKChar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 3/Bài Tập/TienTe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 3/Bài Tập/diemTB.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 3/Bài Tập/max3So.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bài 3/Bài Tập/maxDaySo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss2/course1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss2/course2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss2/course3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss2/course4.jpg" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/Bài Tập/BanCo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/Bài Tập/BanCo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/Bài Tập/TaoFormP1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/Bài Tập/TaoFormP2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/Bài Tập/form_Assignment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/Bài Tập/form_survey.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/Bài Tập/form_survey.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/Bài Tập/form_ĐKyNguoiDung.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/Thực Hành/TaoFormCoBan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5. HTML Form &amp; Table/Thực Hành/TaoFormTimKiem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -59,7 +56,11 @@
       <updated>1630502812886</updated>
       <workItem from="1630502814281" duration="2326000" />
       <workItem from="1630566212760" duration="7997000" />
-      <workItem from="1630651393986" duration="2523000" />
+      <workItem from="1630651393986" duration="3254000" />
+      <workItem from="1630674327690" duration="1343000" />
+      <workItem from="1630828564881" duration="7974000" />
+      <workItem from="1630842443428" duration="14553000" />
+      <workItem from="1630908968381" duration="5276000" />
     </task>
     <servers />
   </component>

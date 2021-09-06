@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thời Khóa Biểu</title>
+</head>
+<body>
+    <h1>THỜI KHÓA BIỂU</h1>
+    <div class="info">
+    <div class="teacher">
+        <span>Lớp: T0908I</span><br>
+        <span>Giáo viên: KhoaNV</span><br>
+        <span>Phòng học: Class3/Lab3</span>
+    </div>
+    <div class="time">
+        <span>Thời gian học: 13:30 - 17:30</span><br>
+        <span>Ngày học: Thứ 3,5,7</span>
+    </div>
+    </div>
+    <form>
+    <table border="1">
+        <tr>
+            <th colspan="3"></th>
+            <th>Thứ 3</th>
+            <th>Thứ 5</th>
+            <th>Thứ 7</th>
+        </tr>
+        <tr>
+            <th>Tuần</th>
+            <th>Ngày Bắt Đầu</th>
+            <th>Ngày Kết Thúc</th>
+            <th colspan="3">Môn Học</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>01/09/2009</td>
+            <td>05/09/2009</td>
+            <td>CF - T1,L1</td>
+            <td>CF - T2,L2</td>
+            <td>CF - T3,L3</td>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>01/09/2009</td>
+            <td>05/09/2009</td>
+            <td>CF - T1,L1</td>
+            <td>CF - T2,L2</td>
+            <td>CF - T3,L3</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+        </tr>
+    </table>
+    <style>
+
+        .time  {
+            margin-right: 30px;
+        }
+
+        h1 {
+            padding-left: 77px;
+            color: blue;
+        }
+        div {
+            color: blue;
+        }
+        table tr:nth-child(1) th:not(:first-child){
+            background-color: yellow;
+        }
+        table tr:nth-child(2){
+            background-color: orange;
+        }
+        .info {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+
+        }
+        body {
+            width: 500px;
+            margin: 0 auto;
+        }   
+
+
+
+    </style>
+</form>
+</body>
+</html>

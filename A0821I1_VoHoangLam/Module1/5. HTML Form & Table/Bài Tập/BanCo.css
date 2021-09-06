@@ -1,0 +1,74 @@
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #f8f8f8;
+    font-size: 1.4rem;
+    overflow-x: hidden;
+    font-weight: 300;
+    padding: 1rem 2rem;
+}
+
+
+section {
+    width: 30rem;
+    background-color: #acdf20;
+    margin: 0 auto;
+}
+
+section table {
+    margin: 0 auto;
+    width: 23rem;
+    padding: 2rem;
+    position: relative;
+}
+
+section table thead {
+    border: 1px solid #4ea53f;
+}
+
+section table thead tr {
+    position: relative;
+}
+
+section table thead tr th {
+    font-size: 1.8rem;
+    color: #d81717;
+    font-weight: bold;
+    text-align: center;
+}
+
+section table thead .col {
+    position: absolute;
+    top: 45px;
+    left: -2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section table tbody .odd td:nth-child(odd) {
+    background-color: #cecbcb;
+}
+
+section table tbody .odd td:nth-child(even) {
+    background-color: #111111;
+}
+
+section table tbody .even td:nth-child(odd) {
+    background-color: #111111;
+}
+
+section table tbody .even td:nth-child(even) {
+    background-color: #cecbcb;
+}
+
+section table tbody tr td {
+    text-align: center;
+    width: 0.5rem;
+    height: 2rem;
+}
+
+

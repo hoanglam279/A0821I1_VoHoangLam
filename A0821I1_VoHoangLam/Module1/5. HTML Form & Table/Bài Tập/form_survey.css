@@ -1,0 +1,84 @@
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #f8f8f8;
+    font-size: 1.4rem;
+    overflow-x: hidden;
+    font-weight: 300;
+    padding: 1rem 2rem;
+}
+
+form {
+    padding: 10px;
+}
+
+.head {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.select {
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.item {
+    margin-bottom: 7px;
+}
+
+input.dolar {
+    width: 100px;
+}
+
+input.cent {
+    width: 30px;
+}
+
+textarea.area {
+    width: 700px;
+    height: 100px;
+}
+
+table {
+    margin-bottom: 20px;
+    width: 800px;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+table thead {
+    border-bottom: 1px solid gray;
+}
+
+table thead tr {
+    text-align: center;
+    background: rgba(110, 108, 108, 0.781);
+}
+
+table tbody tr {
+    text-align: center;
+}
+
+table tbody tr:nth-child(even) {
+    width: 100%;
+    background: rgba(110, 108, 108, 0.781);
+    border: 1px solid black;
+}
+
+table tbody tr td input {
+    display: block;
+    margin: 0 auto;
+}
+
+.span {
+    margin: 10px;
+}
+
+span.lcent {
+    margin-left: 53px;
+}
+
