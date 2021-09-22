@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Cấu trúc điều kiện 2 </title>
+</head>
+<body>
+<p>Bài 1: Chuyển từ độ C sang độ F.</p>
+<label for="celsius">Celsius</label>
+<input id="celsius" size="15px" type="text">
+<input onclick="Convert()" type="button" value="Convert">
+<p id="result1"></p>
+<script>
+    function Convert() {
+        let C = parseFloat(document.getElementById("celsius").value);
+        let res = document.getElementById("result1");
+        if (isNaN(C)) {
+            res.innerHTML = `Enter a number.`
+        } else {
+            res.innerHTML = "<b>Fahrenheit: </b>" + (C * 9 / 5 + 32) + "<b>°F</b>";
+        }
+    }
+</script>
+<hr>
+<p>Bài 2: Chuyển từ mét sang feet:</p>
+<label for="met">Met</label>
+<input id="met" size="15px" type="text">
+<input onclick="Change()" type="button" value="Convert">
+<p id="result2"></p>
+<script>
+    function Change() {
+        let met = parseFloat(document.getElementById("met").value);
+        let res = document.getElementById("result2");
+        if (isNaN(met)) {
+            res.innerHTML = "Enter a number."
+        } else {
+            res.innerHTML = "<b> Feet: </b>" + (met * 3.2808) + "<b>ft</b>";
+        }
+
+    }
+</script>
+<hr>
+<p> Bài 3: Tính diện tích hình vuông khi biết cạnh a.</p>
+<label for="a">Canh</label>
+<input id="a" size="15px" type="text">
+<input onclick="Area()" type="button" value="Area">
+<p id="result3"></p>
+<script>
+    function Area() {
+        let a = parseInt(document.getElementById("a").value);
+        let res = document.getElementById("result3");
+        if (isNaN(a)) {
+            res.innerText = "Enter a number:"
+        } else {
+            res.innerHTML = "<b>Area Square:</b>" + (a * a) + "<b>m²</b>";
+        }
+    }
+</script>
+<hr>
+<p>Bài 4: Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.</p>
+<label for="RectangleA">RectangleA</label>
+<input id="RectangleA" size="15px" type="text">
+<label for="RectangleB">RectangleB</label>
+<input id="RectangleB" size="15px" type="text">
+<input onclick="AreaRectangular()" type="button" value="AreaRectangular">
+<p id="result4"></p>
+<script>
+    function AreaRectangular() {
+        let RectangleA = parseInt(document.getElementById("RectangleA").value);
+        let RectangleB = parseInt(document.getElementById("RectangleB").value);
+        let res = document.getElementById("result4")
+        if (isNaN(RectangleA) || isNaN(RectangleB)) {
+            res.innerText = "Enter a number:"
+        } else {
+            res.innerHTML = "<b>Area Rectangle:</b>" + (RectangleA * RectangleB) + "<b>m²</b>"
+        }
+    }
+</script>
+<hr>
+<p>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</p>
+<label for="TriangleA">TriangleA</label>
+<input id="TriangleA" size="15px" type="text">
+<label for="TriangleB">TriangleB</label>
+<input id="TriangleB" size="15px" type="text">
+<input onclick="AreaTriangle()" type="button" value="AreaRectangular">
+<p id="result5"></p>
+<script>
+    function AreaTriangle() {
+        let TriangleA = parseInt(document.getElementById("TriangleA").value);
+        let TriangleB = parseInt(document.getElementById("TriangleB").value);
+        let res = document.getElementById("result5")
+        if (isNaN(TriangleA) || isNaN(TriangleB)) {
+            res.innerText = "Enter a number:"
+        } else {
+            res.innerHTML = "<b>Area Rectangle:</b>" + (1 / 2 * (TriangleA * TriangleB)) + "<b>m²</b>";
+        }
+    }
+</script>
+<hr>
+<p>Bài 6: Giải phương trình bậc 1.</p>
+<label for="CoefficientA">CoefficientA</label>
+<input id="CoefficientA" size="15px" type="text">
+<label for="CoefficientB">CoefficientB</label>
+<input id="CoefficientB" size="15px" type="text">
+<input onclick="SolveEquation()" type="button" value="SolveEquation">
+<p id="result6"></p>
+<script>
+    function SolveEquation() {
+        let CoefficientA = parseFloat(document.getElementById("CoefficientA").value);
+        let CoefficientB = parseFloat(document.getElementById("CoefficientB").value);
+        let res = document.getElementById("result6");
+        if (CoefficientA === 0) {
+            if (CoefficientB === 0) {
+                res.innerText = "Phương trình có vô số nghiệm."
+            } else {
+                res.innerText = "Phương trình vô nghiệm."
+            }
+        } else {
+            res.innerHTML = "<b>Nghiem x=</b>" + (-CoefficientB / CoefficientA);
+        }
+
+    }
+</script>
+<hr>
+<p>Bài 7: Giải phương trình bậc 2.</p>
+<label for="HeSoA">HeSoA</label>
+<input id="HeSoA" size="15px" type="text">
+<label for="HeSoB">HeSoB</label>
+<input id="HeSoB" size="15px" type="text">
+<label for="HeSoC">HeSoC</label>
+<input id="HeSoC" size="15px" type="text">
+<input onclick="Equation()" type="button" value="SolveEquation">
+<p id="result7"></p>
+<script>
+    function Equation() {
+        let HeSoA = parseFloat(document.getElementById("HeSoA").value);
+        let HeSoB = parseFloat(document.getElementById("HeSoB").value);
+        let HeSoC = parseFloat(document.getElementById("HeSoC").value);
+        let res = document.getElementById("result7");
+        let delta = (HeSoB * HeSoB) - (4 * (HeSoA * HeSoC));
+        if (delta === 0) {
+            res.innerHTML = "<b>Phương trình có nghiệm kép x1=x2=</b>" + ((-HeSoB / 2) * HeSoA);
+        } else if (delta > 0) {
+            let x1 = (-HeSoB - Math.sqrt(delta)) / (2 * HeSoA);
+            let x2 = (-HeSoB + Math.sqrt(delta)) / (2 * HeSoA);
+            res.innerHTML = `<b>Phương trình có 2 nghiệm phân biệt</b> : ${x1} ;  ${x2}`;
+        } else {
+            res.innerText = 'Phương trình vô nghiệm';
+        }
+
+    }
+</script>
+<hr>
+<p>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ
+    120 và lơn hơn 0.</p>
+<label for="age">Age</label>
+<input id="age" size="15px" type="text">
+<input onclick="CheckAge()" type="button" value="Check">
+<p id="result8"></p>
+<script>
+    function CheckAge() {
+        let age = parseInt(document.getElementById("age").value);
+        let res = document.getElementById("result8")
+        if (age > 0 && age < 120) {
+            res.innerHTML = "<b>Là tuổi của một người.</b>";
+        } else {
+            res.innerHTML = "<b>Không phải tuổi của một người.</b>";
+        }
+
+    }
+</script>
+<hr>
+<p>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một
+    tam giác là:</p>
+<label for="CaA">CaA</label>
+<input id="CaA" size="15px" type="text">
+<label for="CaB">CaB</label>
+<input id="CaB" size="15px" type="text">
+<label for="CaC">CaC</label>
+<input id="CaC" size="15px" type="text">
+<input onclick="CheckTriangle()" type="button" value="Check">
+<p id="result9"></p>
+<script>
+    function CheckTriangle() {
+        let CaA = parseInt(document.getElementById("CaA").value);
+        let CaB = parseInt(document.getElementById("CaB").value);
+        let CaC = parseInt(document.getElementById("CaC").value);
+        let res = document.getElementById("result9")
+        if ((CaA > 0 && CaB > 0 && CaC > 0) && (CaA + CaB > CaC || CaC + CaA > CaB || CaB + CaC > CaA)) {
+            res.innerHTML = "<b>Là các cạnh của một tam giác vuông.</b>";
+        } else {
+            res.innerHTML = "<b>Không phải là các cạnh của một tam giác vuông.</b>";
+        }
+    }
+</script>
+/* Cho kWh từ 0 - 50 1.678/
+Cho kWh từ 51 - 100 1.734/
+Cho kWh từ 101 - 200 2.014/
+Cho kWh từ 201 - 300 2.536/
+Cho kWh từ 301 trở lên 2.834/
+*/
+<p>Bài 10: Viết chương trình tính giá điện.</p>
+<label for="kWh">kWh</label>
+<input id="kWh" size="15px" type="text">
+<input onclick="Electricity()" type="button" value="Electricity">
+<p id="result10"></p>
+<script>
+    function Electricity() {
+        let kHw = parseFloat(document.getElementById("kWh").value);
+        let res = document.getElementById("result10")
+        if (kHw <= 50) {
+            res.innerHTML = "<b> Result Electricity: </b>" + (kHw * 1.678) + "<b>VND</b>";
+        } else if (kHw <= 100) {
+            res.innerHTML = "<b> Result Electricity: </b>" + (kHw * 1.734) + "<b>VND</b>";
+        } else if (kHw <= 200) {
+            res.innerHTML = "<b> Result Electricity: </b>" + (kHw * 2.014) + "<b>VND</b>";
+        } else if (kHw <= 300) {
+            res.innerHTML = "<b> Result Electricity: </b>" + (kHw * 2.536) + "<b>VND</b>";
+        } else {
+            res.innerHTML = "<b> Result Electricity: </b>" + (kHw * 2.834) + "<b>VND</b>";
+        }
+
+
+    }
+
+</script>
+<hr>
+/*Bậc 1: 4 triệu đồng/tháng 0%;
+Bậc 2: Trên 4 - 10 triệu đồng/tháng: 5%;
+Bậc 3: 10 -20 triệu đồng: 10%;
+Bậc 4: 21 - 30 triệu đồng/tháng: 15%;
+Bậc 5: 31 - 40 triệu đồng/tháng: 20%;
+Bậc 5: Trên 40 triệu/tháng:25%; */
+<p>Bài 11: Viết chương trình tính thuế thu nhập cá nhân</p>
+<label for="income">Income</label>
+<input id="income" size="15px" type="text">
+<input onclick="Tax()" type="button" value="Tax">
+<p id="result11"></p>
+<script>
+    function Tax() {
+        let income = parseFloat(document.getElementById("income").value);
+        let res = document.getElementById("result11");
+        if (income <= 4000) {
+            res.innerHTML = "<b> Result personal income tax: </b>" + (income) + "<b>VND</b>";
+        } else if (income <= 10000) {
+            res.innerHTML = "<b> Result personal income tax: </b>" + (income * 5 / 100) + "<b>VND</b>";
+        } else if (income <= 20000) {
+            res.innerHTML = "<b> Result personal income tax: </b>" + (income * 10 / 100) + "<b>VND</b>";
+        } else if (income <= 30000) {
+            res.innerHTML = "<b> Result personal income tax: </b>" + (income * 15 / 100) + "<b>VND</b>";
+        } else if (income <= 40000) {
+            res.innerHTML = "<b> Result personal income tax: </b>" + (income * 20 / 100) + "<b>VND</b>";
+        } else {
+            res.innerHTML = "<b> Result personal income tax: </b>" + (income * 25 / 100) + "<b>VND</b>";
+        }
+    }
+
+</script>
+<hr>
+/*Nếu mức tiền vay từ 1.000.000 đến dưới 5.000.000 --> Mức lãi vay là 0,1%/ tháng
+Nếu mức tiền vay từ 5.000.000 đến dưới 10.000.000 --> Mức lãi vay là 0.5%/ tháng
+Nếu mức tiền vay từ 10.000.000 đến dưới 50.000.000 --> Mức lãi vay là 0.9%/ tháng
+Nếu mức tiền vay từ 50.000.000 đến dưới 100.000.000 --> Mức lãi vay là 1.1/ tháng
+Nếu mức tiền vay từ trên 100.000.000 --> Mức lãi vay là 1.3/ tháng*/
+<p>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi
+    xuất hàng tháng.</p>
+<label for="loan">Loan</label>
+<input id="loan" size="15px" type="text">
+<label for="deTime">DepositTime</label>
+<input id="deTime" size="15px" type="text">
+<input onclick="interest()" type="button" value="Interest">
+<p id="result12"></p>
+<script>
+    function interest() {
+        let loan = parseFloat(document.getElementById("loan").value);
+        let deTime = parseFloat(document.getElementById("deTime").value);
+        let res = document.getElementById("result12");
+        if (loan <= 5000000) {
+            res.innerHTML = "<b> Result Bank interest rate: </b>" + ((loan * deTime * 0.1) / 100) + "<b>VND</b>";
+        } else if (loan <= 10000000) {
+            res.innerHTML = "<b> Result Bank interest rate: </b>" + ((loan * deTime * 0.5) / 100) + "<b>VND</b>";
+        } else if (loan <= 50000000) {
+            res.innerHTML = "<b> Result Bank interest rate: </b>" + ((loan * deTime * 0.9) / 100) + "<b>VND</b>";
+        } else if (loan <= 100000000) {
+            res.innerHTML = "<b> Result Bank interest rate: </b>" + ((loan * deTime * 1.1) / 100) + "<b>VND</b>";
+        } else {
+            res.innerHTML = "<b> Result Bank interest rate: </b>" + ((loan * deTime * 1.3) / 100) + "<b>VND</b>";
+        }
+
+    }
+</script>
+</body>
+</html>

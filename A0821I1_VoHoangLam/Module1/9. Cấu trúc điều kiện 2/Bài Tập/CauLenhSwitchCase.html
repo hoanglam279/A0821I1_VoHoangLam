@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập số ngày</title>
+</head>
+<body>
+<label>Nhập tháng :</label>
+<input id="thang" type="text">
+<button onclick="tinhsongay()"> Tính số ngày</button>
+<script>
+    function tinhsongay() {
+        let month = parseInt(document.getElementById("thang").value);
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 11:
+                alert("Thang " + month + " co 31 ngay");
+                break;
+            case 2:
+                alert("Thang " + month + " co 29 or 28 ngay");
+                break;
+            case 4:
+            case 6:
+            case 8:
+            case 10:
+            case 12:
+                alert("Thang" + month + "co 30 ngay");
+                break;
+        }
+    }
+</script>
+</body>
+</html>
