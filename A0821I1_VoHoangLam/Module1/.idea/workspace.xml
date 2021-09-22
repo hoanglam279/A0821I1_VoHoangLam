@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67b19229-b7e5-4ca9-8f90-600d541eefda" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/10. Cấu trúc lặp 1/Thực Hành/TH1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10. Cấu trúc lặp 1/Thực Hành/TH2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10. Cấu trúc lặp 1/Thực Hành/Th3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10. Cấu trúc lặp 1/Thực Hành/Th4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/11. Cấu trúc lặp 2/Bài Tập/SoNguyenTo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/12. Mảng 1/Thực Hành/Th1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8. Cấu trúc điều kiện 1/Thực Hành/TH1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8. Cấu trúc điều kiện 1/Thực Hành/TH2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8. Cấu trúc điều kiện 1/Thực Hành/TH3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8. Cấu trúc điều kiện 1/Thực Hành/TH4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8. Cấu trúc điều kiện 1/Thực Hành/TH5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9. Cấu trúc điều kiện 2/Bài Tập/CauLenhSwitchCase.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9. Cấu trúc điều kiện 2/Bài Tập/ChiSoCanNang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9. Cấu trúc điều kiện 2/Bài Tập/LuyenTap1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9. Cấu trúc điều kiện 2/Bài Tập/MayTinhDonGian.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9. Cấu trúc điều kiện 2/Thực Hành/SuKienChuot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7. Biến, kiểu dữ liệu và toán tử/Bài Tập/Bien_KieuDL_ToanTu/bai1.html" beforeDir="false" afterPath="$PROJECT_DIR$/7. Biến, kiểu dữ liệu và toán tử/Bài Tập/Bien_KieuDL_ToanTu/bai1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9. Cấu trúc điều kiện 2/Bài Tập/LuyenTap1.html" beforeDir="false" afterPath="$PROJECT_DIR$/9. Cấu trúc điều kiện 2/Bài Tập/LuyenTap1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9. Cấu trúc điều kiện 2/Bài Tập/LuyenTap2.html" beforeDir="false" afterPath="$PROJECT_DIR$/9. Cấu trúc điều kiện 2/Bài Tập/LuyenTap2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +69,7 @@
       <workItem from="1631703767312" duration="6935000" />
       <workItem from="1631861033721" duration="762000" />
       <workItem from="1632135113327" duration="1297000" />
-      <workItem from="1632305456311" duration="7189000" />
+      <workItem from="1632305456311" duration="8343000" />
     </task>
     <servers />
   </component>
