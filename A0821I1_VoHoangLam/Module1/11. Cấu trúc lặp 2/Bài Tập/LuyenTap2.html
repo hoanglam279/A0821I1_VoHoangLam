@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 2</title>
+</head>
+<body>
+<div class="bai1">
+    <h1>Bài 1</h1>
+    <button onclick="Bai1()">Finonaci</button>
+</div>
+<div class="bai2">
+    <h1>Bài 2</h1>
+    <button onclick="Bai2()">Giai thừa</button>
+</div>
+<div class="bai3">
+    <h1>Bài 3</h1>
+    <button onclick="Bai3()">In tam giác vuông</button>
+</div>
+<div class="bai4">
+    <h1>Bài 4</h1>
+    <button onclick="Bai4()">in hình chữ nhật</button>
+</div>
+<div class="bai5">
+    <h1>Bài 5</h1>
+    <button onclick="Bai5()">tính lãi ngân hàng</button>
+</div>
+<div class="bai6">
+    <h1>Bài 6</h1>
+    <button onclick="Bai6()">In hình trái tim</button>
+</div>
+<script>
+    function Bai1() {
+        let F = 0, F1 = 0, F2 = 0;
+        let fibonacci = "";
+        for (let i = 1; i < 50; i++) {
+            if (i == 1) {
+                F = 1;
+                F2 = 1;
+                fibonacci += F + "<br>";
+            } else {
+                F = F1 + F2;
+                F1 = F2;
+                F2 = F;
+                fibonacci += F + "<br>";
+            }
+        }
+        document.write(fibonacci);
+    }
+
+    function Bai2() {
+        let giaithua = 1;
+        let num = prompt("Nhập số : ");
+        for (let i = 1; i <= num; i++) {
+            giaithua *= i;
+        }
+        document.write("Giai thừa của " + num + "! =" + giaithua);
+    }
+
+    function Bai3() {
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write(" * ");
+            }
+            document.write("<br>");
+        }
+        document.write("<br><br>");
+
+
+        for (let a = 1; a <= 5; a++) {
+            for (let b = 5; b >= a; b--) {
+                document.write(" * ");
+            }
+            document.write("<br>");
+        }
+        document.write("<br> <br>");
+
+
+        for (let row = 1; row <= 5; row++) {
+            for (let col = 5; col >= row; col--) {
+                document.write("&ensp;");
+            }
+            for (let k = 1; k <= row; k++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br> <br>");
+
+
+        for (let row = 1; row <= 5; row++) {
+            for (let col = 1; col <= 5; col++) {
+                if (col < row) {
+                    document.write("&ensp;");
+                } else {
+                    document.write("*")
+                }
+            }
+            document.write("<br>")
+        }
+        document.write("<br> <br>");
+    }
+
+    function Bai4() {
+        for (let i = 1; i <= 7; i++) {
+            for (let j = 1; j <= 30; j++) {
+                if (j === 1 || j === 30 || i === 1 || i === 7) {
+                    document.write("*")
+                } else {
+                    document.write("&ensp;")
+                }
+            }
+            document.write(" <br> ")
+        }
+    }
+
+    function Bai5() {
+        let moneys = parseFloat(prompt("nhập số tiền ban đầu :"));
+        let months = parseFloat(prompt("nhập số tháng vay :"));
+        let r = parseFloat(prompt("nhập phần trăm lãi xuất(%) :"));
+        let lai = 0;
+        for (let i = 1; i <= months; i++) {
+            lai = moneys - (moneys * r / 100);
+            moneys += lai;
+        }
+        document.write('số tiền phải trả tổng cộng là :' + moneys);
+    }
+
+    function Bai6() {
+        function inTim() {
+            for (let i = 1; i <= 5; i++) {
+                for (let j = 1; j <= 5; j++) {
+                    if ((i == 1 && j == 1) || (i == 1 && j == 3) || (i == 1 && j == 5) || (i == 4 && j == 1) || (i == 4 && j == 5) || (i == 5 && j != 3)) {
+                        document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                    } else {
+                        document.write("*&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                    }
+                }
+                document.write("</br>");
+                document.write("</br>");
+                document.write("</br>");
+            }
+        }
+
+        inTim();
+    }
+</script>
+
+</body>
+</html>

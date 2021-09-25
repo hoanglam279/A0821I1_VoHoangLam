@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1</title>
+</head>
+<body>
+<div class="bai1">
+    <h1>Bài 1</h1>
+    <button onclick="Bai1()">Tìm số lớn hơn 10</button>
+</div>
+<div class="bai2">
+    <h1>Bài 2</h1>
+    <button onclick="Bai2()">Giá trị lớn nhất</button>
+</div>
+<div class="bai3">
+    <h1>Bài 3</h1>
+    <button onclick="Bai3()">Giá trị trung bình</button>
+</div>
+<div class="bai4">
+    <h1>Bài 4</h1>
+    <button onclick="Bai4()">Đảo ngược</button>
+</div>
+<div class="bai5">
+    <h1>Bài 5</h1>
+    <button onclick="Bai5()">Đếm số</button>
+</div>
+<div class="bai6">
+    <h1>Bài 6</h1>
+    <button onclick="Bai6()">In số</button>
+</div>
+<div class="bai7">
+    <h1>Bài 7</h1>
+    <button onclick="Bai7()">Xóa số</button>
+</div>
+<div class="bai8">
+    <h1>Bài 8</h1>
+    <button onclick="Bai8()">Sắp xếp mảng</button>
+</div>
+<div class="bai9">
+    <h1>Bài 9</h1>
+    <button onclick="Bai9()">Hiển thị mảng</button>
+</div>
+<script>
+    function Bai1() {
+        let n = parseInt(prompt("nhập số lượng phần tử"));
+        let arr = new Array(n);
+        for (let i = 0; i < n; i++) {
+            let tmp = prompt("nhập ptu thứ " + i);
+            arr[i] = tmp;
+        }
+        let d = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > 10) {
+                d++;
+            }
+        }
+        document.write("số phần tử lớn hơn 10 là : " + d);
+    }
+
+    function Bai2() {
+        let n = parseInt(prompt("nhập số lượng phần tử"));
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            let tmp = prompt("nhập ptu thứ " + i);
+            arr[i] = tmp;
+        }
+        var max = arr[0];
+        var ind = 0;
+        for (let i = 0; i <= n; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                ind = i;
+            }
+        }
+        document.write("các giá trị của mảng :" + arr.toString() + "<br>");
+        document.write("phần tử lớn nhất là : " + max + " vị trí :" + ind);
+    }
+
+    function Bai3() {
+        let n = parseInt(prompt("Nhập số phần tử trong mảng :"));
+        let array = Array(n);
+        let index = 0;
+        let tb = 0;
+        for (let j = 0; j < array.length; j++) {
+            array[j] = parseInt(prompt("Nhập số nguyên :"));
+        }
+        let tong = array[0];
+        let max = array[0];
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                index = i;
+            }
+            tong += array[i];
+        }
+        console.log(tong);
+        tb = tong / n;
+        document.write("Số lớn nhất trong mảng là : " + max + " tại vị trí thứ :" + index + "<br>");
+        document.write("Trung bình các giá trị phần tử trong mảng : " + tb);
+    }
+
+    function Bai4() {
+        let n = parseInt(prompt("Nhập số phần tử trong mảng :"));
+        let array = Array(n);
+        for (let i = 0; i < array.length; i++) {
+            array[i] = parseInt(prompt("Nhập số nguyên :"));
+        }
+        let first = 0;
+        let last = array.length - 1;
+        while (first < last) {
+            let y = array[first];
+            array[first] = array[last];
+            array[last] = y;
+            first++;
+            last--;
+        }
+        document.write(array);
+    }
+
+    function Bai5() {
+        let n = prompt("nhập số lượng phần tử");
+        let arr = new Array(n);
+        for (let i = 0; i < n; i++) {
+            arr[i] = prompt("nhập ptu thứ " + i);
+        }
+        let d = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0)
+                d++;
+        }
+        document.write("các giá trị của mảng :" + arr.toString() + "<br>");
+        document.write("số phần tử âm là : " + d);
+    }
+
+    function Bai6() {
+        let n = parseInt(prompt("Nhập số phần tử mảng A: "));
+        let arr = Array(n);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = parseInt(prompt("Nhập phần tử số nguyên " + (i + 1) + " :"));
+        }
+        let v = parseInt(prompt("Nhập phần tử số nguyên V : "));
+        console.log(arr)
+        console.log(v)
+        if (arr.indexOf(v) != -1) {
+            document.write("V is in the array A");
+        } else {
+            document.write("V is not in the array A");
+        }
+    }
+
+    function Bai7() {
+        let n = parseInt(prompt("Nhập số phần tử mảng A: "));
+        let arr = Array(n);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = parseInt(prompt("Nhập phần tử số nguyên " + (i + 1) + " :"));
+        }
+        let v = parseInt(prompt("Nhập phần tử số nguyên V : "));
+        console.log(arr)
+        console.log(v)
+        if (arr.indexOf(v) != -1) {
+            document.write("V is in the array A");
+            arr.splice(arr.indexOf(v), 1);
+            arr.push(0);
+            document.write("<br>" + arr + " là mảng sau khi xóa V ");
+            console.log(arr);
+        } else {
+            document.write("V is not in the array A");
+        }
+    }
+
+    function Bai8() {
+        let n = parseInt(prompt("Nhập số phần tử mảng A: "));
+        let arr = Array(n);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = parseInt(prompt("Nhập phần tử số nguyên " + (i + 1) + " :"));
+        }
+        let arr1 = arr.sort(function (a, b) {
+            return b - a
+        });
+        document.write("Mảng sau khi được sắp xếp giảm dần : " + arr1);
+    }
+
+    function Bai9() {
+        let n = parseInt(prompt("Nhập số phần tử mảng A: "));
+        let arr = Array(n);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = parseInt(prompt("Nhập phần tử số nguyên " + (i + 1) + " :"));
+        }
+        let m = parseInt(prompt("Nhập số phần tử mảng B: "));
+        let arr1 = Array(m);
+        for (let i = 0; i < arr.length; i++) {
+            arr1[i] = parseInt(prompt("Nhập phần tử số nguyên " + (i + 1) + " :"));
+        }
+        let arr2 = [];
+        arr2 = arr.concat(arr1);
+        document.write("Mảng c sau khi được nối từ mảng A và B là :" + arr2);
+    }
+</script>
+</body>
+</html>

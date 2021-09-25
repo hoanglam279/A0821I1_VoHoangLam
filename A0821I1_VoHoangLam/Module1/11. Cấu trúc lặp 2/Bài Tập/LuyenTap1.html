@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1</title>
+</head>
+
+<body>
+<div class="bai1">
+    <h1>Bài 1</h1>
+    <button onclick="Bai1()">Đếm</button>
+</div>
+<div class="bai2">
+    <h1>Bài 2</h1>
+    <input id="temp" type="number">
+    <button onclick="Bai2()">kiểm tra</button>
+</div>
+<div class="bai2">
+    <h1>Bài 3</h1>
+    <button onclick="Bai3()">in dãy số fibo</button>
+</div>
+<div class="bai2">
+    <h1>Bài 4</h1>
+    <button onclick="Bai4()">in số fibo đầu tiên chia hết cho 5</button>
+</div>
+<div class="bai2">
+    <h1>Bài 5</h1>
+    <button onclick="Bai5()">in tổng fibo</button>
+</div>
+<div class="bai2">
+    <h1>Bài 6</h1>
+    <button onclick="Bai6()">Tổng các số chia hết cho 7</button>
+</div>
+<div class="bai2">
+    <h1>Bài 7</h1>
+    <button onclick="Bai7()">Fizzbuzz</button>
+</div>
+<div class="bai2">
+    <h1>Bài 8</h1>
+    <button onclick="Bai8()">Chơi</button>
+</div>
+
+
+<script>
+    function Bai1() {
+
+        for (let x = 1; x < 100; x++) {
+            console.log(x);
+            if (x == 99) {
+                alert("done")
+            }
+        }
+
+    }
+
+    function Bai2() {
+        let temp = Number(document.getElementById("temp").value);
+        if (temp > 100) {
+            alert("hãy giảm nhiệt độ ngay");
+        }
+        if (temp < 20) {
+            alert("hãy tăng nhiệt độ ngay");
+
+        }
+    }
+
+    function Bai3() {
+        let count = 0;
+        let i = 1;
+        let list = "";
+        while (count < 20) {
+            if (fibonacci(i)) {
+                console.log(fibonacci(i));
+                list = list + "," + fibonacci(i);
+                count++;
+            }
+            i++;
+        }
+        alert("20 số đầu trong dãy fibo :" + list);
+
+        function fibonacci(num) {
+            if (num <= 1) return num;
+            return fibonacci(num - 1) + fibonacci(num - 2);
+        }
+    }
+
+    function Bai4() {
+        let count = 0;
+        let i = 1;
+        let list = "";
+        while (count < 20) {
+            if (fibonacci(i) && fibonacci(i) % 5 == 0) {
+                alert(fibonacci(i));
+                break;
+            } else {
+                count++;
+            }
+            i++;
+        }
+
+        function fibonacci(num) {
+            if (num <= 1) return num;
+            return fibonacci(num - 1) + fibonacci(num - 2);
+        }
+    }
+
+    function Bai5() {
+        let count = 0;
+        let i = 1;
+        let list = 0;
+        while (count < 20) {
+            if (fibonacci(i)) {
+                list = +fibonacci(i);
+                count++;
+            }
+            i++;
+        }
+        alert("20 số đầu trong dãy fibo :" + list);
+
+        function fibonacci(num) {
+            if (num <= 1) return num;
+            return fibonacci(num - 1) + fibonacci(num - 2);
+        }
+    }
+
+    function Bai6() {
+        let count = 0;
+        let i = 1;
+        let list = 0;
+        while (count < 30) {
+            if (i % 7 == 0) {
+                console.log(i);
+                list = list + i;
+                count++;
+            }
+            i++;
+        }
+        alert("tổng:" + list);
+
+    }
+
+    function Bai7() {
+        let count = 0;
+        let i = 1;
+        let list = "";
+
+        while (count < 100) {
+            if ((i % 3 == 0) && (i % 5 == 0)) {
+                console.log("fizzbuzz");
+                list = list + ";" + " fizzbuzz ";
+                count++;
+            } else if (i % 5 == 0) {
+                console.log("buzz");
+                list = list + ";" + " buzz ";
+                count++;
+            } else if (i % 3 == 0) {
+                console.log("fizz");
+                list = list + ";" + " fizz ";
+                count++;
+
+            }
+            i++;
+        }
+        alert(list);
+    }
+
+    function Bai8() {
+        let range = parseInt(prompt("Trò chơi đoán số từ 0 - ? : "));
+        let num = prompt("Nhập số bạn đoán :");
+        let numRandom;
+        let count = 1;
+        numRandom = Math.floor(Math.random() * range);
+        console.log(numRandom);
+        while (count <= 3) {
+            if (num < numRandom) {
+                alert("Số bạn chọn nhỏ hơn số đúng. Cho phép chọn lại (tối đa 3 lần) : ")
+                num = prompt("Nhập số bạn đoán :");
+                count++;
+            } else if (num > numRandom) {
+                alert("Số bạn chọn lớn hơn số đúng. Cho phép chọn lại (tối đa 3 lần) : ")
+                num = prompt("Nhập số bạn đoán :");
+                count++;
+            } else {
+                alert("Bạn đã chọn đúng. Xin chúc mừng!!!")
+                break;
+            }
+        }
+    }
+</script>
+</body>
+
+</html>
