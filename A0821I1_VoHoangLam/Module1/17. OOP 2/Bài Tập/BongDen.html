@@ -5,64 +5,54 @@
     <title>chương trình thể hiện sự tương tác giữa hai đối tượng: công tắc và bóng đèn</title>
 </head>
 <body>
+<img height="200" id="bong_den" src="" width="100">
+<button onclick="switchButton()">Bật/Tắt</button>
 <script>
     class ElectricLamp {
-        constructor(status) {
-            this.status = status;
+        constructor() {
+            document.getElementById("bong_den").src = "Images/1.png";
         }
 
         turnOn() {
+            document.getElementById("bong_den").src = "Images/2.jpg";
+        }
+
+        turnOf() {
+            document.getElementById("bong_den").src = "Images/3.png";
+        }
+    }
+
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        connectToLamp(lamp) {
+            this.lamp = lamp;
+        }
+
+        turnOnSwitchButton() {
+            this.lamp.turnOn();
             this.status = true;
         }
 
-        turnOff() {
+        turnOfSwitchButton() {
+            this.lamp.turnOf();
             this.status = false;
         }
     }
 
-    class SwitchButton extends ElectricLamp {
-        constructor(status) {
-            super(status);
-        }
+    let lamp = new ElectricLamp();
+    let switchButton1 = new SwitchButton(false, lamp);
 
-        connectToLamp() {
-            if (this.status === true) {
-                alert('ON')
-            } else {
-                alert('OFF')
-            }
-        }
-
-        switchOn() {
-            this.turnOn()
-            this.connectToLamp()
-        }
-
-        switchOff() {
-            this.turnOff()
-            this.connectToLamp()
-        }
-    }
-
-    let a = new SwitchButton(true);
-    for (let i = 0; i < 10; i++) {
-        if (i % 2 === 0) {
-            a.switchOff()
+    function switchButton() {
+        if (switchButton1.status) {
+            switchButton1.turnOfSwitchButton();
         } else {
-            a.switchOn()
+            switchButton1.turnOnSwitchButton();
         }
     }
-
-
-
-
-
-
-
-
-
-
 </script>
-
 </body>
 </html>
