@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let n;
+    n = prompt("Nhập chuỗi cần kiểm tra!");
+    document.write("chuỗi vừa nhập là:" + n);
+
+    function checkchart(strings) {
+        let i = 0;
+        while (i < strings.length) {
+            character = strings.charAt(i);
+            if (character == character.toUpperCase()) {
+                count = count + 1;
+            }
+            i++;
+        }
+        if (count > 0) {
+            alert(" số kí tự in hoa trong chuỗi là : " + count);
+        } else {
+
+            alert("The Strings is not contain upper char");
+        }
+    }
+
+    checkchart(n);
+</script>
+</body>
+</html>
